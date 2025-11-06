@@ -27,12 +27,13 @@ const TodoApp = () => {
     setTodos(
       todos.map((todo) => (todo.id === id ? { ...todo, text: newText } : todo))
     );
-    toast.info("Task updated successfully!", {});
+    toast.info("Task updated successfully!", {
+      autoClose : 2000
+    });
   };
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
     toast.error("Item deleted successfully", {
-      // position: 'bottom-right',
       autoClose: 2000,
     });
   };
@@ -42,7 +43,11 @@ const TodoApp = () => {
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );
-    toast.warning("button changes");
+    toast.warning("button changes",{
+      position : "top-center",
+      autoClose : 2000
+
+    });
   };
   return (
     <div className="min-h-screen p-8">
