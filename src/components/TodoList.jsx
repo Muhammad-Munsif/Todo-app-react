@@ -2,9 +2,9 @@ import React from "react";
 import TodoItem from "./TodoItem";
 const TodoList = ({ todos, deleteTodo, toggleComplete, editTodo }) => {
   return (
-    <div className="md:w-6/12 mx-auto mt-6 space-y-3 overflow-y-auto">
+    <div className="md:w-6/12  mx-auto mt-6 space-y-3 overflow-auto ">
       {todos.length === 0 ? (
-        <p className="text-center text-gray-500 p-4 bg-white rounded-lg shadow-md">
+        <p className="text-center text-gray-500 p-4 bg-white rounded-lg shadow-md text-break">
           No tasks yet! Add a new item above.
         </p>
       ) : (
