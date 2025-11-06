@@ -49,7 +49,9 @@ const TodoApp = () => {
 
     });
   };
+
   return (
+
     <div className="min-h-screen p-8">
       <div className="bg-white rounded-xl md:w-6/12 mx-auto py-6 shadow-2xl">
         <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
@@ -58,6 +60,7 @@ const TodoApp = () => {
             List App
           </span>
         </h1>
+
         <div className="flex items-center justify-center gap-2 px-6">
           <input
             type="text"
@@ -76,6 +79,7 @@ const TodoApp = () => {
           </button>
         </div>
       </div>
+
       <TodoList
         todos={todos}
         deleteTodo={deleteTodo}
@@ -83,6 +87,7 @@ const TodoApp = () => {
         editTodo={editTodo}
       />
     </div>
+    
   );
 };
 
