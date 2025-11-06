@@ -28,7 +28,7 @@ const TodoApp = () => {
       todos.map((todo) => (todo.id === id ? { ...todo, text: newText } : todo))
     );
     toast.info("Task updated successfully!", {
-      autoClose : 2000
+      autoClose: 2000,
     });
   };
   const deleteTodo = (id) => {
@@ -43,15 +43,13 @@ const TodoApp = () => {
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );
-    toast.warning("button changes",{
-      position : "top-center",
-      autoClose : 2000
-
+    toast.warning("button changes", {
+      position: "top-center",
+      autoClose: 2000,
     });
   };
 
   return (
-
     <div className="min-h-screen p-8">
       <div className="bg-white rounded-xl md:w-6/12 mx-auto py-6 shadow-2xl">
         <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
@@ -87,7 +85,6 @@ const TodoApp = () => {
         editTodo={editTodo}
       />
     </div>
-    
   );
 };
 
