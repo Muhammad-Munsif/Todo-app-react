@@ -5,7 +5,7 @@ const TodoItem = ({ todo, deleteTodo, toggleComplete, editTodo }) => {
   const [editText, setEditText] = useState(todo.text);
 
   const handleEditSave = () => {
-    if (editText.trim() && editText !== todo.text) {
+    if (editText.trim() && editText !== todo.id) {
       editTodo(todo.id, editText.trim());
     }
     setIsEditing(false);
