@@ -1,7 +1,6 @@
 import React from "react";
 import TodoApp from "./components/TodoApp";
 import { ToastContainer } from "react-toastify";
-
 const App = () => {
   return (
     <div className="bg-gray-200 min-h-screen py-6">
@@ -13,5 +12,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
