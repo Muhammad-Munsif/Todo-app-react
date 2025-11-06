@@ -10,7 +10,7 @@ const TodoItem = ({ todo, deleteTodo, toggleComplete, editTodo }) => {
     setIsEditing(false);
   };
   return (
-    <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+    <div className="flex items-center md:flex-row justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
       {isEditing ? (
         <input
           type="text"
@@ -18,12 +18,12 @@ const TodoItem = ({ todo, deleteTodo, toggleComplete, editTodo }) => {
           onChange={(e) => setEditText(e.target.value)}
           onBlur={handleEditSave}
           onKeyPress={(e) => e.key === "Enter" && handleEditSave()}
-          className="flex-1 p-1 border-b-2 border-blue-500 focus:outline-none text-lg text-gray-800"
+          className="flex-1 flex-wrap p-1 border-b-2 border-blue-500 focus:outline-none text-lg text-gray-800"
           autoFocus
         />
       ) : (
         <span
-          className={`flex-1 text-lg cursor-pointer transition duration-150 ${
+          className={`flex-1 text-lg w-25 cursor-pointer transition duration-150 ${
             todo.completed ? "line-through text-gray-500" : "text-gray-800"
           }`}
           onClick={() => toggleComplete(todo.id)}
@@ -31,7 +31,7 @@ const TodoItem = ({ todo, deleteTodo, toggleComplete, editTodo }) => {
           {todo.text}
         </span>
       )}
-      <div className="flex space-x-2">
+      <div className="flex md:flex-wrap space-x-2">
         <button
           onClick={() => {
             if (isEditing) {
