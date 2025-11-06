@@ -12,7 +12,6 @@ const TodoItem = ({ todo, deleteTodo, toggleComplete }) => {
         {todo.text}
       </span>
 
-      {/* Action Buttons */}
       <div className="flex space-x-2">
         <button
           onClick={() => toggleComplete(todo.id)}

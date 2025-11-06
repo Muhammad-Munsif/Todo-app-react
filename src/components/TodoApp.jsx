@@ -24,6 +24,15 @@ const TodoApp = () => {
     setInput("");
   };
 
+  const editTodo = (id, newText) => {
+    setTodos(
+        todos.map(todo => 
+            todo.id === id ? { ...todo, text: newText } : todo
+        )
+    );
+    toast.info('Task updated successfully!', {});
+};
+
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
     toast.error("Item deleted successfully", {
@@ -74,6 +83,7 @@ const TodoApp = () => {
         todos={todos}
         deleteTodo={deleteTodo}
         toggleComplete={toggleComplete}
+        editTodo={editTodo}
       />
     </div>
   );
