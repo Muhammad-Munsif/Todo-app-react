@@ -1,19 +1,16 @@
 import React from "react";
 import TodoApp from "./components/TodoApp";
 import { ToastContainer } from "react-toastify";
-import BgColor from "./components/BgColor";
-import ColorChanger from "./components/ColorChnager";
+
 const App = () => {
   return (
     <div className="bg-gray-200 min-h-screen py-6">
-      <BgColor/>
-      <ColorChanger  BgColor={BgColor}/>
       <h1 className="text-center font-serif font-semibold text-gray-500 mb-4">
         Todo List App
       </h1>
       <TodoApp />
       <ToastContainer />
-    </div> 
+    </div>
   );
 };
 
