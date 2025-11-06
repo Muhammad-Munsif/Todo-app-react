@@ -23,14 +23,12 @@ const TodoApp = () => {
     setTodos([...todos, newTodo]);
     setInput("");
   };
-
   const editTodo = (id, newText) => {
     setTodos(
       todos.map((todo) => (todo.id === id ? { ...todo, text: newText } : todo))
     );
     toast.info("Task updated successfully!", {});
   };
-
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
     toast.error("Item deleted successfully", {
@@ -38,7 +36,6 @@ const TodoApp = () => {
       autoClose: 2000,
     });
   };
-
   const toggleComplete = (id) => {
     setTodos(
       todos.map((todo) =>
@@ -47,7 +44,6 @@ const TodoApp = () => {
     );
     toast.warning("button changes");
   };
-
   return (
     <div className="min-h-screen p-8">
       <div className="bg-white rounded-xl md:w-6/12 mx-auto py-6 shadow-2xl">
@@ -57,7 +53,6 @@ const TodoApp = () => {
             List App
           </span>
         </h1>
-
         <div className="flex items-center justify-center gap-2 px-6">
           <input
             type="text"
@@ -76,7 +71,6 @@ const TodoApp = () => {
           </button>
         </div>
       </div>
-
       <TodoList
         todos={todos}
         deleteTodo={deleteTodo}

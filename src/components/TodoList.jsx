@@ -1,6 +1,5 @@
 import React from "react";
 import TodoItem from "./TodoItem";
-
 const TodoList = ({ todos, deleteTodo, toggleComplete, editTodo }) => {
   return (
     <div className="md:w-6/12 mx-auto mt-6 space-y-3 overflow-y-auto">
@@ -22,5 +21,4 @@ const TodoList = ({ todos, deleteTodo, toggleComplete, editTodo }) => {
     </div>
   );
 };
-
 export default TodoList;

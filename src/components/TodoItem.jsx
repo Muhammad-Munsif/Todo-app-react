@@ -3,14 +3,12 @@ import React, { useState } from "react";
 const TodoItem = ({ todo, deleteTodo, toggleComplete, editTodo }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editText, setEditText] = useState(todo.text);
-
   const handleEditSave = () => {
     if (editText.trim() && editText !== todo.id) {
       editTodo(todo.id, editText.trim());
     }
     setIsEditing(false);
   };
-
   return (
     <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
       {isEditing ? (
@@ -47,7 +45,6 @@ const TodoItem = ({ todo, deleteTodo, toggleComplete, editTodo }) => {
         >
           {isEditing ? "Save" : "Edit"}
         </button>
-
         <button
           onClick={() => toggleComplete(todo.id)}
           className={`p-2 text-xs font-semibold rounded-lg ${
@@ -58,7 +55,6 @@ const TodoItem = ({ todo, deleteTodo, toggleComplete, editTodo }) => {
         >
           {todo.completed ? "Undo" : "Complete"}
         </button>
-
         <button
           onClick={() => deleteTodo(todo.id)}
           className="p-2 text-xs font-semibold text-white bg-red-500 rounded-lg hover:bg-red-600 transition"
