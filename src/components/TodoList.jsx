@@ -1,7 +1,7 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-const TodoList = ({ todos, deleteTodo, toggleComplete }) => {
+const TodoList = ({ todos, deleteTodo, toggleComplete, editTodo }) => {
   return (
     <div className="md:w-6/12 mx-auto mt-6 space-y-3 overflow-y-auto">
       {todos.length === 0 ? (
@@ -15,6 +15,7 @@ const TodoList = ({ todos, deleteTodo, toggleComplete }) => {
             todo={todo}
             deleteTodo={deleteTodo}
             toggleComplete={toggleComplete}
+            editTodo={editTodo}
           />
         ))
       )}
