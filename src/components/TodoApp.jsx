@@ -17,7 +17,6 @@ const TodoApp = () => {
       completed: false,
     };
     toast.success("Item added successfully", {
-      position: "top-left",
       autoClose: 2000,
     });
     setTodos([...todos, newTodo]);
@@ -44,7 +43,6 @@ const TodoApp = () => {
       )
     );
     toast.warning("button changes", {
-      position: "top-center",
       autoClose: 2000,
     });
   };
@@ -71,7 +69,7 @@ const TodoApp = () => {
           />
           <button
             onClick={handleTodo}
-            className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white px-4 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-150 text-nowrap"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition duration-150 text-nowrap"
           >
             Add Task
           </button>
