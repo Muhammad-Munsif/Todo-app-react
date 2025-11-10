@@ -4,7 +4,7 @@ import TodoItem from "./TodoItem";
 const TodoList = ({ todos, deleteTodo, toggleComplete, editTodo }) => {
 
   return (
-   <div className="">
+   <div className=" ">
      <div className="overflow-y-scroll h-[60vh] custom-scrollbar-style mx-auto"> 
       <div className="md:w-6/12 mx-auto mt-6 space-y-3"> 
         {todos.length === 0 ? (
