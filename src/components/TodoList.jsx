@@ -4,13 +4,8 @@ import TodoItem from "./TodoItem";
 const TodoList = ({ todos, deleteTodo, toggleComplete, editTodo }) => {
 
   return (
-    // 1. THIS is the scrollable container. It MUST have a defined height.
-    <div className="overflow-y-scroll 
-                  h-[60vh] 
-                  custom-scrollbar-style mx-auto"> 
-      
-      {/* 2. This inner div holds the content (centered, spaced). 
-          We removed 'overflow-auto' from here as the parent manages scrolling. */}
+   <div className="w-full max-w-7xl mx-auto">
+     <div className="overflow-y-scroll h-[50vh] custom-scrollbar-style mx-auto"> 
       <div className="md:w-6/12 mx-auto mt-6 space-y-3"> 
         {todos.length === 0 ? (
           <p className="text-center text-gray-500 p-4 bg-white rounded-lg shadow-md text-break">
@@ -29,6 +24,7 @@ const TodoList = ({ todos, deleteTodo, toggleComplete, editTodo }) => {
         )}
       </div>
     </div>
+   </div>
   );
 };
 
