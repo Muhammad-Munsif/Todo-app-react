@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TodoList from "./TodoList";
 import { toast } from "react-toastify";
-import TodolistItemApp from "./TodolistItemApp";
+
 
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
@@ -28,6 +28,7 @@ const TodoApp = () => {
       position : "top-center",
       autoClose : 2000,
     });
+    setInput('')
     return;
     }
 
@@ -62,10 +63,10 @@ const TodoApp = () => {
     setTodos(
       todos.map((todo) =>
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
-      )
-    );
-    toast.warning("Status toggled!", { autoClose: 2000 });
-  };
+    )
+  );
+  toast.warning("Status toggled!", { autoClose: 2000 });
+};
 
   return (
     <>
@@ -101,7 +102,6 @@ const TodoApp = () => {
           editTodo={editTodo}
         />
       </div>
-      <TodolistItemApp />
     </>
   );
 };
