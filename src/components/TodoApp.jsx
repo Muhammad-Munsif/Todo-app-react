@@ -23,8 +23,8 @@ const TodoApp = () => {
     );
 
     if (duplicateName) {
-      toast.error(`"${inputField}" is already in the list`, {
-        position: "top-center",
+      toast.error(`"${inputField}" is already in the card list`, {
+        position: "",
         autoClose: 2000,
       });
       setInput("");
