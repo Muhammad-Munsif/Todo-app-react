@@ -13,6 +13,16 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+.todo-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 70vh;
+  scrollbar-width: none; /* Firefox */
+}
+
+.todo-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
 
 @layer utilities {
   /* .custom-scrollbar-hide {
