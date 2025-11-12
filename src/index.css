@@ -1,29 +1,18 @@
 @import "tailwindcss";
 /* Remove or comment out these conflicting rules: */
-/*
 html {
   overflow-y: hidden;
   overflow-x: hidden;
-}
-
-body {
-  scrollbar-width: none;
-  margin: 0;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-*/
-
+  }
+  
 .todo-scroll {
   max-height: 70vh;
   overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 
 .todo-scroll::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
 }
 
 .custom-scrollbar-style {
@@ -32,7 +21,7 @@ body::-webkit-scrollbar {
 }
 
 .custom-scrollbar-style::-webkit-scrollbar {
-  width: 8px; /* Reduced from 1rem for better appearance */
+  width: 1rem; /* Reduced from 1rem for better appearance */
 }
 
 .custom-scrollbar-style::-webkit-scrollbar-track {
