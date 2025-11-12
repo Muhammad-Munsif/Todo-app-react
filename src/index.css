@@ -1,5 +1,4 @@
 @import "tailwindcss";
-/* Remove or comment out these conflicting rules: */
 html {
   overflow-y: hidden;
   overflow-x: hidden;
@@ -21,7 +20,7 @@ html {
 }
 
 .custom-scrollbar-style::-webkit-scrollbar {
-  width: 1rem; /* Reduced from 1rem for better appearance */
+  width: 1rem;
 }
 
 .custom-scrollbar-style::-webkit-scrollbar-track {

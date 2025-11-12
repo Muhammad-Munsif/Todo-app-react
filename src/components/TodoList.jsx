@@ -95,7 +95,7 @@ import TodoItem from "./TodoItem";
 
 const TodoList = ({ todos, deleteTodo, toggleComplete, editTodo }) => {
   return (
-    <div className="custom-scrollbar-style mx-auto todo-container">
+    <div className="custom-scrollbar-style mx-auto todo-container bg-white">
       {todos.length === 0 ? (
         <div className="md:w-6/12 mx-auto mt-6 p-4">
           <p className="text-center text-gray-500 p-4 bg-white rounded-lg shadow-md text-break w-full">
