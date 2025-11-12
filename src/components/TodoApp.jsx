@@ -37,7 +37,7 @@ const TodoApp = () => {
     // Create new todo object
     const newTodo = {
       id: Date.now(),
-      text: inputField || newTextItem,
+      text: inputField,
       completed: false,
     };
 
