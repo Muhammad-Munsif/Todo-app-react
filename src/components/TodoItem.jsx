@@ -9,7 +9,6 @@ const TodoItem = ({ todo, deleteTodo, toggleComplete, editTodo }) => {
       editTodo(todo.id, editText.trim());
     }
     setIsEditing(false);
-    // setEditText("");
   };
 
   return (
